@@ -1,0 +1,138 @@
+.map {
+  padding: 115px 0 90px;
+  &.sm {
+    padding-top: 0;
+  }
+  &__inner {
+    &-title {
+      text-align: center;
+      max-width: 934px;
+      margin: 0 auto 40px;
+    }
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+  &Image {
+    position: relative;
+    padding-bottom: 48%;
+    z-index: 2;
+    min-height: 400px;
+  }
+  &Banner {
+    position: relative;
+    padding-bottom: 48%;
+    z-index: 2;
+    min-height: 400px;
+    img,
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include fullImage;
+    }
+    iframe {
+      z-index: 3;
+    }
+  }
+  .card {
+    width: 100%;
+    min-width: 232px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    &__list {
+      a {
+        color: $black !important;
+      }
+    }
+  }
+
+  .leaflet-popup {
+    .leaflet-popup-content {
+      margin: 0;
+      &-wrapper {
+        padding: 0;
+        box-shadow: unset;
+      }
+    }
+  }
+  .leaflet {
+    &-container {
+      a {
+        &.leaflet-popup-close-button {
+          width: 18px;
+          height: 18px;
+          background-color: #fff;
+          position: absolute;
+          top: 6px;
+          right: 6px;
+          z-index: 4;
+          opacity: 0;
+          span {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin map-xlg-xxlg {
+  .map {
+    padding: 80px 0;
+  }
+}
+// 930px
+@mixin map-md-lg {
+  .map {
+    padding: 50px 0;
+    &__inner {
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// 750px
+@mixin map-sm-md {
+  .map {
+    padding: 35px 0;
+    .auto__container {
+      padding: 0;
+    }
+    &__inner {
+      &-title {
+        margin-bottom: 28px;
+        padding: 0 20px;
+      }
+      h2 {
+        margin-bottom: 16px;
+      }
+    }
+    &Image {
+      padding-bottom: 56%;
+    }
+    &Banner {
+      padding-bottom: 56%;
+    }
+  }
+}
+// 650px
+@mixin map-sm-md-extra {
+  .map {
+    .card {
+      min-width: 200px;
+      &__content {
+        padding: 12px 12px 16px 10px;
+      }
+      &__list {
+        margin-bottom: 10px;
+        a,
+        p {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}

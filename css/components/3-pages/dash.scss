@@ -1,0 +1,168 @@
+.dash {
+  padding: 90px 0 60px;
+  &__inner {
+    &-title {
+      max-width: 940px;
+      margin: 0 auto 60px;
+      text-align: center;
+      p {
+        margin-bottom: 12px;
+        &:last-child {
+          margin: 0;
+        }
+        b {
+          font-weight: 700;
+        }
+      }
+    }
+    &-col {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-family: $dazzle;
+      letter-spacing: 0.02em;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+  }
+  &Item {
+    display: flex;
+    background-color: #f5f5f4;
+    margin-bottom: 28px;
+    position: relative;
+    &:last-child {
+      margin: 0;
+    }
+    &.visited {
+      .dashItem {
+        &__tag {
+          color: $white;
+          background-color: $black;
+        }
+      }
+    }
+    &__tag {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #f5f5f4;
+      font-size: 16px;
+      line-height: 100%;
+      padding: 4px 10px;
+      width: 100%;
+      max-width: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s ease;
+      z-index: 2;
+    }
+
+    &__image {
+      width: 100%;
+      padding-bottom: 66%;
+      position: relative;
+      height: 100%;
+      &-wrapper {
+        width: 50%;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &__content {
+      width: 50%;
+      padding: 20px 25px;
+      h6 {
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-family: $dazzle;
+      }
+      p {
+        line-height: 130%;
+      }
+    }
+  }
+}
+// 1180px
+@mixin dash-xlg-xxlg {
+  .dash {
+    padding: 80px 0 50px;
+    &__inner {
+      &-title {
+        margin-bottom: 40px;
+        p {
+          margin-bottom: 8px;
+        }
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// 930px
+@mixin dash-md-lg {
+  .dash {
+    padding: 50px 0;
+  }
+}
+// 750px
+@mixin dash-sm-md {
+  .dash {
+    padding: 35px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 25px;
+      }
+    }
+    &Item {
+      &__tag {
+        max-width: 100px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+// 540px
+@mixin dash-xsm-sm {
+  .dash {
+    &__inner {
+      &-title {
+        h2 {
+          font-size: 16px;
+          margin-bottom: 24px;
+
+        }
+      }
+    }
+    &Item {
+      margin-bottom: 16px;
+      &__tag {
+        max-width: 70px;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 4px;
+      }
+      &__content {
+        padding: 16px 14px;
+        h6 {
+          font-size: 12px;
+          line-height: 14px;
+          margin-bottom: 4px;
+        }
+        p {
+          &.ex {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

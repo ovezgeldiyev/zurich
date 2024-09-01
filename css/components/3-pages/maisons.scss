@@ -1,0 +1,255 @@
+.maisons {
+  padding: 115px 0 170px;
+  &__inner {
+    &-title {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+  }
+  &Item {
+    width: calc(33.3% - 30px);
+    margin: 30px 15px;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+      img {
+        transform: scale(1.1);
+      }
+    }
+    &__image {
+      width: 100%;
+      position: relative;
+      padding-bottom: 75%;
+      margin-bottom: 25px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+        transition: 0.3s ease;
+      }
+    }
+    h4 {
+      font-family: $dazzle;
+    }
+  }
+}
+// 1180px
+@mixin maisons-xlg-xxlg {
+  .maisons {
+    padding: 80px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 35px;
+      }
+      &-row {
+        margin: 0 -10px;
+      }
+    }
+    &Item {
+      width: calc(33.3% - 20px);
+      margin: 20px 10px;
+    }
+  }
+}
+// 930px
+@mixin maisons-md-lg {
+  .maisons {
+    padding: 50px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 20px;
+      }
+    }
+    &Item {
+      width: calc(50% - 20px);
+    }
+  }
+}
+// 750px
+@mixin maisons-sm-md {
+  .maisons {
+    padding: 35px 0;
+    &__inner {
+      &-title {
+        margin-bottom: 24px;
+      }
+      &-row {
+        flex-direction: column;
+        margin: 0;
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 25px 0;
+
+      &:last-child {
+        margin: 0;
+      }
+      &__image {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.detail {
+  padding: 115px 0;
+  &__inner {
+    &-logo {
+      width: 332px;
+      margin: 0 auto 124px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-image {
+      width: 100%;
+      position: relative;
+      padding-bottom: 75%;
+      &-wrapper {
+        width: calc(50% - 15px);
+        max-width: 800px;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &-content {
+      width: calc(50% - 15px);
+      max-width: 764px;
+    }
+    &-title {
+      margin-bottom: 36px;
+      h4 {
+        margin-bottom: 10px;
+      }
+    }
+    &-info {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      h6 {
+        margin-bottom: 10px;
+      }
+      a,
+      p {
+        line-height: 130%;
+      }
+      a {
+        &:hover {
+          opacity: 1;
+          color: $primary;
+        }
+      }
+    }
+    &-link {
+      font-weight: 500;
+      position: relative;
+      &::before {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        background-color: $black;
+        height: 1px;
+        transition: 0.3s ease;
+        content: "";
+      }
+      &:hover {
+        opacity: 1;
+        color: $primary;
+        &::before {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin detail-xlg-xxlg {
+  .detail {
+    padding: 80px 0;
+    &__inner {
+      &-logo {
+        margin-bottom: 70px;
+        width: 300px;
+      }
+      &-title {
+        margin-bottom: 20px;
+      }
+      &-info {
+        margin-bottom: 20px;
+        h6 {
+          margin-bottom: 6px;
+        }
+      }
+      &-image {
+        &-wrapper {
+          width: calc(52% - 10px);
+        }
+      }
+      &-content {
+        width: calc(48% - 10px);
+      }
+    }
+  }
+}
+// 930px
+@mixin detail-md-lg {
+  .detail {
+    padding: 50px 0 70px;
+    &__inner {
+      &-logo {
+        margin-bottom: 24px;
+        width: 250px;
+      }
+      &-row {
+        flex-direction: column;
+      }
+      &-image {
+        &-wrapper {
+          width: 100%;
+          max-width: unset;
+          margin-bottom: 30px;
+        }
+      }
+      &-content {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+  }
+}
+// 750px
+@mixin detail-sm-md {
+  .detail {
+    padding: 35px 0 45px;
+  }
+}
+// 540px
+@mixin detail-xsm-sm {
+  .detail {
+    &__inner {
+      &-logo {
+        width: 190px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

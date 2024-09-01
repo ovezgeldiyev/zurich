@@ -1,0 +1,285 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  .main {
+    padding-top: 104px;
+  }
+  @include header-xxxxlg-xxxxxlg;
+  @include nav-xxxxlg-xxxxxlg;
+  @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  .video {
+    &__play {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  @include hero-xxxlg-xxxxlg;
+  @include products-xxxlg-xxxxlg;
+  @include partners-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  .main {
+    padding-top: 91px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 26px;
+  }
+  h6 {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  p {
+    &.sm {
+      font-size: 18px;
+    }
+    &.ex {
+      font-size: 14px;
+    }
+  }
+  body {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .video {
+    &__play {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  @include header-xlg-xxlg;
+  @include nav-xlg-xxlg;
+  @include hero-xlg-xxlg;
+  @include register-xlg-xxlg;
+  @include dash-xlg-xxlg;
+  @include quiz-xlg-xxlg;
+  @include maisons-xlg-xxlg;
+  @include detail-xlg-xxlg;
+  @include map-xlg-xxlg;
+  @include join-xlg-xxlg;
+  @include products-xlg-xxlg;
+  @include banner-xlg-xxlg;
+  @include partners-xlg-xxlg;
+  @include hero-xlg-xxlg;
+  @include info-xlg-xxlg;
+  @include footer-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .main {
+    padding-top: 64px;
+    &.last {
+      padding: 0;
+    }
+  }
+  .lang {
+    a {
+      font-size: 18px;
+    }
+    hr {
+      height: 22px;
+      margin: 0 8px;
+    }
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+  @include partners-lg-xlg;
+  @include info-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h2 {
+    font-size: 34px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  @include hero-md-lg;
+  @include register-md-lg;
+  @include dash-md-lg;
+  @include quiz-md-lg;
+  @include maisons-md-lg;
+  @include detail-md-lg;
+  @include map-md-lg;
+  @include join-md-lg;
+  @include products-md-lg;
+  @include banner-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 25px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  p {
+    &.sm {
+      font-size: 16px;
+    }
+    &.ex {
+      font-size: 14px;
+    }
+  }
+  body {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .button {
+    &.big {
+      font-size: 16px;
+      line-height: 18px;
+      padding: 15px 20px;
+    }
+    &.mid {
+      font-size: 16px;
+      padding: 15px 20px;
+    }
+  }
+  .video {
+    padding-bottom: 56%;
+    &__play {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  @include hero-sm-md;
+  @include register-sm-md;
+  @include dash-sm-md;
+  @include maisons-sm-md;
+  @include detail-sm-md;
+  @include map-sm-md;
+  @include join-sm-md;
+  @include products-sm-md;
+  @include footer-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  .card {
+    width: 200px;
+    &__content {
+      h6 {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 12px;
+      }
+      .button {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    &__list {
+      margin-bottom: 20px;
+      a,
+      p {
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 14px;
+        span {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+  @include hero-sm-md-extra;
+  @include banner-sm-md-extra;
+  @include partners-sm-md-extra;
+  @include info-sm-md-extra;
+  @include map-sm-md-extra;
+  @include footer-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h2 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  .main {
+    padding-top: 48px;
+  }
+  .input {
+    &__outer {
+      p {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 6px;
+        &.ex {
+          font-size: 12px;
+          line-height: 14px;
+          top: calc(100% + 4px);
+        }
+      }
+    }
+    &__icon {
+      width: 22px;
+      height: 14px;
+      &::before {
+        width: 26px;
+      }
+    }
+    input,
+    select {
+      font-size: 16px;
+      line-height: 18px;
+      padding: 15px 20px;
+    }
+  }
+  .video {
+    &__play {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  @include hero-xsm-sm;
+  @include header-xsm-sm;
+  @include nav-xsm-sm;
+  @include dash-xsm-sm;
+  @include quiz-xsm-sm;
+  @include detail-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include hero-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include hero-xxxsm-xxsm;
+}

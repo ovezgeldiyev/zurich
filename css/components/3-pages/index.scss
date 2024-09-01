@@ -1,0 +1,771 @@
+.hero {
+  &Top {
+    padding: 56px 0 50px;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        margin-bottom: 60px;
+        text-align: center;
+      }
+    }
+    &__logo {
+      width: 80%;
+      max-width: 1270px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    .lang {
+      margin-bottom: 45px;
+    }
+  }
+  &Main {
+    position: relative;
+    .auto__container {
+      position: static;
+    }
+    &__bg {
+      width: 100%;
+      display: flex;
+      img {
+        width: 100%;
+      }
+    }
+    &__row {
+      width: 100%;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-50%);
+      h2 {
+        text-align: center;
+      }
+      hr {
+        width: 1px;
+        height: 130px;
+        margin: 0 120px;
+        background-color: $black;
+      }
+    }
+  }
+}
+// 1450px
+@mixin hero-xxxxlg-xxxxxlg {
+  .hero {
+    &__inner {
+      padding: 32px 0;
+      &-logo {
+        width: 270px;
+      }
+    }
+    &Main {
+      &__row {
+        h2 {
+          font-size: 34px;
+        }
+        hr {
+          height: 100px;
+          margin: 0 80px;
+        }
+      }
+    }
+  }
+}
+// 1380px
+@mixin hero-xxxlg-xxxxlg {
+  .hero {
+  }
+}
+// 1250px
+@mixin hero-xlg-xxlg-extra {
+  .hero {
+  }
+}
+// 1180px
+@mixin hero-xlg-xxlg {
+  .hero {
+    &Top {
+      &__inner {
+        h2 {
+          margin-bottom: 40px;
+        }
+      }
+      .lang {
+        margin-bottom: 24px;
+      }
+    }
+    &Main {
+      &__bg {
+        width: 120%;
+        margin: 0 -10%;
+      }
+      &__row {
+        top: -10px;
+        h2 {
+          font-size: 30px;
+        }
+        hr {
+          height: 90px;
+          margin: 0 50px;
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin hero-lg-xlg {
+  .hero {
+  }
+}
+// 930px
+@mixin hero-md-lg {
+  .hero {
+    &Top {
+      padding: 40px 0 60px;
+    }
+    &Main {
+      &__row {
+        top: -25px;
+        h2 {
+          font-size: 25px;
+        }
+        hr {
+          height: 70px;
+          margin: 0 30px;
+        }
+      }
+    }
+  }
+}
+// 750px
+@mixin hero-sm-md {
+  .hero {
+  }
+}
+// 650px
+@mixin hero-sm-md-extra {
+  .hero {
+  }
+}
+// 540px
+@mixin hero-xsm-sm {
+  .hero {
+    &Top {
+      padding: 30px 0 60px;
+      &__inner {
+        h2 {
+          margin-bottom: 22px;
+        }
+      }
+      .lang {
+        margin-bottom: 20px;
+      }
+    }
+    &Main {
+      &__row {
+        top: -35px;
+        h2 {
+          font-size: 15px;
+        }
+        hr {
+          height: 50px;
+          margin: 0 16px;
+        }
+      }
+    }
+  }
+}
+// 440px
+@mixin hero-xxsm-xsm {
+  .hero {
+  }
+}
+.partners {
+  padding-top: 50px;
+  &__inner {
+    padding-bottom: 50px;
+    border-bottom: 4px solid #2889c9;
+    &-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &Item {
+    width: calc(14.2% - 12px);
+    max-width: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      img {
+        opacity: 0;
+        &.over {
+          opacity: 1;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      transition: 0.3s ease;
+      &.over {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+      }
+    }
+  }
+}
+// 1380px
+@mixin partners-xxxlg-xxxxlg {
+  .partners {
+    padding-top: 40px;
+    &__inner {
+      padding-bottom: 30px;
+      border-width: 3px;
+    }
+  }
+}
+// 1180px
+@mixin partners-xlg-xxlg {
+  .partners {
+    &__inner {
+      padding-bottom: 20px;
+      border-width: 2px;
+    }
+    &Item {
+      width: calc(14.2% - 8px);
+    }
+  }
+}
+// 1024px
+@mixin partners-lg-xlg {
+  .partners {
+    &__inner {
+      padding-bottom: 10px;
+      &-row {
+        flex-wrap: wrap;
+      }
+    }
+    &Item {
+      width: calc(25% - 10px);
+      margin: 10px 0;
+    }
+  }
+}
+// 650px
+@mixin partners-sm-md-extra {
+  .partners {
+    padding-top: 20px;
+    &__inner {
+      &-row {
+        justify-content: center;
+        margin: 0 -25px;
+      }
+    }
+    &Item {
+      width: calc(50% - 50px);
+      margin: 5px 25px;
+    }
+  }
+}
+.banner {
+  padding: 150px 0;
+}
+// 1180px
+@mixin banner-xlg-xxlg {
+  .banner {
+    padding: 90px 0;
+  }
+}
+// 930px
+@mixin banner-md-lg {
+  .banner {
+    padding: 60px 0;
+  }
+}
+// 650px
+@mixin banner-sm-md-extra {
+  .banner {
+    padding: 35px 0;
+  }
+}
+.products {
+  &__inner {
+    &-title {
+      text-align: center;
+      max-width: 967px;
+      margin: 0 auto 150px;
+      h5 {
+        margin-bottom: 16px;
+      }
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -20px;
+    }
+  }
+  &Item {
+    width: calc(50% - 40px);
+    margin: 30px 20px;
+    &:hover {
+      opacity: 1;
+      img {
+        transform: scale(1.1);
+      }
+    }
+    &__image {
+      width: 100%;
+      position: relative;
+      padding-bottom: 75%;
+      margin-bottom: 20px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+        transition: 0.3s ease;
+      }
+    }
+    h4 {
+      font-family: $dazzle;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+  }
+}
+// 1380px
+@mixin products-xxxlg-xxxxlg {
+  .products {
+    &__inner {
+      &-title {
+        margin-bottom: 100px;
+      }
+      &-row {
+        margin: 0 -15px;
+      }
+    }
+    &Item {
+      width: calc(50% - 30px);
+      margin: 25px 15px;
+    }
+  }
+}
+// 1180px
+@mixin products-xlg-xxlg {
+  .products {
+    &__inner {
+      &-title {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+// 930px
+@mixin products-md-lg {
+  .products {
+    &__inner {
+      &-title {
+        margin-bottom: 35px;
+      }
+      &-row {
+        margin: 0 -10px;
+      }
+    }
+    &Item {
+      width: calc(50% - 20px);
+      margin: 15px 10px;
+    }
+  }
+}
+// 750px
+@mixin products-sm-md {
+  .products {
+    &__inner {
+      &-title {
+        margin-bottom: 30px;
+      }
+      &-row {
+        flex-direction: column;
+        margin: 0;
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 30px 0;
+      &:last-child {
+        margin: 0;
+      }
+      &__image {
+        margin-bottom: 14px;
+      }
+      h4 {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+.join {
+  padding: 150px 0;
+  &__inner {
+    &-title {
+      text-align: center;
+      max-width: 893px;
+      margin: 0 auto;
+    }
+    h2 {
+      margin-bottom: 36px;
+    }
+    p {
+      margin-bottom: 40px;
+    }
+    .button {
+      width: 80%;
+      max-width: 364px;
+    }
+  }
+}
+// 1180px
+@mixin join-xlg-xxlg {
+  .join {
+    padding: 90px 0;
+  }
+}
+// 930px
+@mixin join-md-lg {
+  .join {
+    padding: 50px 0;
+    &__inner {
+      h2 {
+        margin-bottom: 24px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+// 750px
+@mixin join-sm-md {
+  .join {
+    padding: 50px 0 40px;
+    &__inner {
+      .button {
+        max-width: 250px;
+      }
+      h2 {
+        margin-bottom: 16px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+.info {
+  padding-top: 170px;
+  &__inner {
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 90px;
+    }
+    &-main {
+      position: relative;
+      padding-top: 95px;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 60px;
+        content: "";
+        background-color: #2489c9;
+      }
+      p {
+        line-height: 140%;
+        font-weight: 700;
+      }
+    }
+    &-row {
+      width: calc(100% - 260px);
+      max-width: 950px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 95px;
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        content: "";
+        background-color: #2489c9;
+        clip-path: polygon(0 0, 0 100%, 100% 100%);
+      }
+    }
+    &-col {
+      width: calc(33.3% - 8px);
+      display: flex;
+      flex-direction: column;
+      p {
+        margin-bottom: 14px;
+        &:last-child {
+          margin: 0;
+        }
+        b {
+          font-weight: 700;
+          margin-right: 20px;
+          min-width: 14px;
+        }
+      }
+    }
+  }
+  &Banner {
+    width: 100%;
+    position: relative;
+    padding-bottom: 36%;
+    background-color: #f9f9f2;
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      img {
+        @include fullImage;
+      }
+    }
+  }
+  &Item {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    display: flex;
+    &.first {
+      bottom: 17%;
+      left: 20%;
+    }
+    &.second {
+      bottom: 23%;
+      left: 36%;
+    }
+    &.third {
+      bottom: 37%;
+      left: 38%;
+    }
+    &.fourth {
+      bottom: 41%;
+      left: 42%;
+    }
+    &.fifth {
+      bottom: 50%;
+      left: 54%;
+    }
+    &.sixth {
+      bottom: 48%;
+      left: 72%;
+    }
+    &.seventh {
+      bottom: 68%;
+      left: 77%;
+    }
+  }
+  &Btn {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    transition: 0.3s ease;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+    font-family: $mainFont;
+    color: $white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 5px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: #2489c9;
+      clip-path: polygon(0 0, 0 100%, 100% 100%);
+    }
+    span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+// 1180px
+@mixin info-xlg-xxlg {
+  .info {
+    padding-top: 100px;
+    &__inner {
+      &-top {
+        margin-bottom: 60px;
+      }
+      &-main {
+        padding-top: 70px;
+        &::before {
+          width: 12px;
+          height: 40px;
+        }
+      }
+      &-row {
+        width: calc(100% - 240px);
+        padding-top: 70px;
+        &::before {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin info-lg-xlg {
+  .info {
+    padding-top: 70px;
+    &__inner {
+      &-top {
+        flex-direction: column;
+        margin-bottom: 50px;
+      }
+      &-main {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      &-row {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+    &Item {
+      width: 30px;
+      height: 30px;
+      &.seventh {
+        .card {
+          left: unset;
+          right: 100%;
+        }
+      }
+      &.sixth {
+        .card {
+          left: unset;
+          right: 100%;
+        }
+      }
+    }
+    &Btn {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 4px;
+    }
+  }
+  .card {
+    left: 0;
+  }
+}
+// 650px
+@mixin info-sm-md-extra {
+  .info {
+    padding-top: 40px;
+    &__inner {
+      &-top {
+        margin-bottom: 30px;
+      }
+      &-main {
+        margin-bottom: 25px;
+        padding-top: 50px;
+        &::before {
+          width: 10px;
+          height: 30px;
+        }
+      }
+      &-row {
+        flex-direction: column;
+        padding-top: 50px;
+        &::before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      &-col {
+        width: 100%;
+        margin-bottom: 14px;
+        &:last-child {
+          margin: 0;
+        }
+        p {
+          b {
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+    &Banner {
+      padding-bottom: 66%;
+    }
+    &Item {
+      width: 25px;
+      height: 25px;
+      &.first {
+        left: 10%;
+      }
+      &.second {
+        left: 20%;
+      }
+      &.third {
+        left: 30%;
+      }
+      &.fourth {
+        left: 42%;
+      }
+      &.fifth {
+        bottom: 50%;
+        left: 54%;
+        .card {
+          left: unset;
+          right: 0;
+        }
+      }
+      &.sixth {
+        bottom: 38%;
+        left: 72%;
+      }
+      &.seventh {
+        bottom: 68%;
+        left: 80%;
+      }
+    }
+    &Btn {
+      font-size: 12px;
+      line-height: 14px;
+      padding: 3px;
+    }
+  }
+}
